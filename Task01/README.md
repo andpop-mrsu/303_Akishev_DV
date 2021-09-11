@@ -2,57 +2,57 @@
 ## ratings.csv
 ### Тип: 
 Comma-Separated Values
-### Поля:
+### Fields:
   1) "userId": int,
   2) "movieId": int,
   3) "rating" float,
   4) "timestamp": int.
-### Строк: 18773
+### Strings: 18773
 #
 ## tags.csv
-### Тип: 
+### Type: 
 Comma-Separated Values
 ### Поля:
   1) "userId": int,
   2) "movieId": int,
   3) "tag" : string,
   4) "timestamp": int.
-### Строк: 3683
+### Strings: 3683
 #
 
 ## movies.csv
-### Тип: 
+### Type: 
 Comma-Separated Values
-### Поля:
+### Fields:
   1) "movieId": int,
   2) "title": string,
   3) "genres": string.
-### Строк: 9742
+### Strings: 9742
 #
 ## users.txt
-### Тип: 
-Текстовый файл
-### Поля:
+### Type: 
+Text file
+### Fields:
   1) "userId": int
   2) "userName": string
   3) "userEmail": email
   4) "userSex": string
   5) "userBirthdate": date
   6) "userOccupation": string
-### Строк:  943
+### Strings:  943
 #
 ## ocupation.txt
-### Тип: 
-Текстовый файл
-### Поля:
+### Type: 
+Text file
+### Fields:
   1) "occupation": string
-### Строк:  21
+### Strings:  21
 
 ## genres.txt
-### Тип: 
-Текстовый файл
-### Поля:
+### Type: 
+Text file
+### Fields:
   1) "genres": string
-### Строк:  18
+### Strings:  18
 
 #
