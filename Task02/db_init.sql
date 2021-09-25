@@ -1,7 +1,7 @@
-DROP TABLE IF EXISTS movies;
-DROP TABLE IF EXISTS ratings;
-DROP TABLE IF EXISTS tags;
-DROP TABLE IF EXISTS users;
+drop table if exists movies;
+drop table if exists ratings;
+drop table if exists tags;
+drop table if exists users;
 create table movies(
 	id int primary key,
 	title text,
@@ -9,33 +9,8 @@ create table movies(
 	genres text
 );
 
-create table ratings(
-	id int primary key,
-	user_id int,
-	movie_id int,
-	rating float,
-	timestamp int
-);
+insert into movies(id, title, year, genres) values
 
-create table tags(
-	id int primary key,
-	user_id int,
-	movie_id int,
-	tag text,
-	timestamp int
-);
-
-create table users(
-	id int primary key,
-	name text,
-	email text,
-	gender text,
-	register_date text,
-	occupation text
-);
-
-insert into movies(id, title, year, genres)
-values
 (1, 'Toy Story (1995)', 1995, 'Adventure|Animation|Children|Comedy|Fantasy'),
 (2, 'Jumanji (1995)', 1995, 'Adventure|Children|Fantasy'),
 (3, 'Grumpier Old Men (1995)', 1995, 'Comedy|Romance'),
@@ -9779,8 +9754,16 @@ values
 (193587, 'Bungo Stray Dogs: Dead Apple (2018)', 2018, 'Action|Animation'),
 (193609, 'Andrew Dice Clay: Dice Rules (1991)', 1991, 'Comedy');
 
-insert into ratings(id, user_id, movie_id, rating, timestamp)
-values
+create table ratings(
+	id int primary key,
+	user_id int,
+	movie_id int,
+	rating float,
+	timestamp int
+);
+
+insert into ratings(id, user_id, movie_id, rating, timestamp) values
+
 (1, 1, 1, 4.0, 964982703),
 (2, 1, 3, 4.0, 964981247),
 (3, 1, 6, 4.0, 964982224),
@@ -28555,8 +28538,16 @@ values
 (18772, 120, 1210, 5.0, 860070182),
 (18773, 120, 1367, 4.0, 860070258);
 
-insert into tags(id, user_id, movie_id, tag, timestamp)
-values
+create table tags(
+	id int primary key,
+	user_id int,
+	movie_id int,
+	tag text,
+	timestamp int
+);
+
+insert into tags(id, user_id, movie_id, tag, timestamp) values
+
 (1, 2, 60756, 'funny', 1445714994),
 (2, 2, 60756, 'Highly quotable', 1445714996),
 (3, 2, 60756, 'will ferrell', 1445714992),
@@ -32241,8 +32232,17 @@ values
 (3682, 610, 3265, 'heroic bloodshed', 1493843978),
 (3683, 610, 168248, 'Heroic Bloodshed', 1493844270);
 
-insert into users(id, name, email, gender, register_date, occupation)
-values
+create table users(
+	id int primary key,
+	name text,
+	email text,
+	gender text,
+	register_date text,
+	occupation text
+);
+
+insert into users(id, name, email, gender, register_date, occupation) values
+
 (1, 'Devonte Stamm', 'marianne.krajcik@bartoletti.com', 'male', '2010-09-19', 'technician'),
 (2, 'Merritt Grimes', 'rempel.yvette@kertzmann.com', 'male', '2018-06-12', 'other'),
 (3, 'Dianna Herzog', 'jarrell.stokes@gmail.com', 'female', '2013-11-19', 'writer'),
