@@ -1,7 +1,7 @@
 import csv 
 import re
 
-data_base = open('Task02/db_init.sql', 'w+')
+data_base = open('db_init.sql', 'w+')
 
 tables = ['movies', 'ratings', 'tags', 'users']
 
@@ -19,7 +19,7 @@ data_base.write(
 
 data_base.write('insert into movies(id, title, year, genres) values\n')
 
-movies_file = open('Task02/movies.csv', 'r')
+movies_file = open('movies.csv', 'r')
 all_movies = ""
 reader = csv.DictReader(movies_file)
 for film in reader:
@@ -41,7 +41,7 @@ data_base.write(
 
 data_base.write('insert into ratings(id, user_id, movie_id, rating, timestamp) values\n')
 
-ratings_file = open('Task02/ratings.csv')
+ratings_file = open('ratings.csv')
 all_ratings = ""
 reader = csv.DictReader(ratings_file)
 id = 1
@@ -63,7 +63,7 @@ data_base.write(
     '\n')
 
 data_base.write('insert into tags(id, user_id, movie_id, tag, timestamp) values\n')
-tags_file = open('Task02/tags.csv')
+tags_file = open('tags.csv')
 all_tags = ""
 reader = csv.DictReader(tags_file)
 id = 1
@@ -86,7 +86,7 @@ data_base.write(
     '\n')
 
 data_base.write('insert into users(id, name, email, gender, register_date, occupation) values\n')
-user_file = open('Task02/users.txt')
+user_file = open('users.txt')
 all_users = ""
 for user in user_file.readlines():
     user = user.rstrip().replace('"', '""').replace("'", "''").split('|')
